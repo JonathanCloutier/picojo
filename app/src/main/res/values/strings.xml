@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pico</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="game_label">Picojo</string>
+    <string name="players_label">Players</string>
+    <string name="phrases_label">Phrases</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="welcome">Welcome to Picojo</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_feature1">Feature 1</string>
+</resources>

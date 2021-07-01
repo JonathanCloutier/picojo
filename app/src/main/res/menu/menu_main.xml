@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pico.MainActivity">
+    <item
+        android:id="@+id/player_setting"
+        android:checkable="false"
+        android:onClick="accessPlayerSettings"
+        android:orderInCategory="100"
+        android:title="@string/players_label"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/custom_phrase_setting"
+        android:checkable="false"
+        android:onClick="accessPhraseSettings"
+        android:orderInCategory="100"
+        android:title="@string/phrases_label"
+        app:showAsAction="never" />
+</menu>

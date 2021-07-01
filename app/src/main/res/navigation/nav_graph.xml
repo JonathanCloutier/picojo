@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/GameFragment">
+
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.picojo.GameFragment"
+        android:label="@string/game_label"
+        tools:layout="@layout/game_fragment">
+
+        <action
+            android:id="@+id/action_to_PlayerFragment"
+            app:destination="@id/PlayerFragment" />
+
+        <action
+            android:id="@+id/action_to_PhraseFragment"
+            app:destination="@id/PhraseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PlayerFragment"
+        android:name="com.picojo.PlayerFragment"
+        android:label="@string/players_label"
+        tools:layout="@layout/player_fragment">
+
+        <action
+            android:id="@+id/action_to_GameFragment"
+            app:destination="@id/GameFragment" />
+        <action
+            android:id="@+id/action_to_PhraseFragment"
+            app:destination="@id/PhraseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PhraseFragment"
+        android:name="com.picojo.PhraseFragment"
+        android:label="@string/phrases_label"
+        tools:layout="@layout/phrase_fragment">
+
+        <action
+            android:id="@+id/action_to_GameFragment"
+            app:destination="@id/GameFragment" />
+        <action
+            android:id="@+id/action_to_PlayerFragment"
+            app:destination="@id/PlayerFragment" />
+    </fragment>
+</navigation>
