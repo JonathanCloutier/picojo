@@ -13,6 +13,7 @@ public class Phrases {
         phrases.clear();
 
         //Actions
+        phrases.add("%s tu peux doubler 1 fois max 12 gorgée");
         phrases.add("%s si tu a bu plus q'une 24 dans la derniere semaine chug. A partir de dimanche");
         phrases.add("%s Dit le nom complet de tout le monde qui joue ou prend 5 gorgé");
         phrases.add("%s Mets tes bas dans tes mains pour 6 questions. si tu n'a pas de mains/bas tu chug");
