@@ -1,13 +1,21 @@
 package com.picojo.phrases;
 
+import android.util.Log;
+
 import com.picojo.settings.Settings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Random;
 
 public class Phrases {
+    private static final int QUEUE_MAX_SIZE = 30;
+
     private static List<String> phrases = new ArrayList();
+    private static Queue<String> recentlyUsedPhrases = new LinkedList();
 
     public static void reset() {
         phrases.clear();
@@ -102,7 +110,6 @@ public class Phrases {
         phrases.add("%s racontre une blague  ou prend 4 gorgées");
 
         //Jeux
-    
         phrases.add("Flip the cup: Le premier qui échoue prend autant de gorgé qu'il y a eu de réussite");
         phrases.add("Le dernier a mettre son pouce sur la table après %s prend 5 gorgées");
         phrases.add("%s dit quelque chose que tu n'aime pas. Tous ceux qui aime prenne 2 gorgées");
@@ -146,19 +153,29 @@ public class Phrases {
 
     public static String getRandom() {
         String phrase = getRandomPhrase();
-        Integer playersRequired = getNumberOfPlayerRequired(phrase);
-
-        while (Settings.getPlayerCount() < playersRequired) {
+        while (hasEnoughPlayers(phrase) && !recentlyUsedPhrases.contains(phrase)) {
             phrase = getRandomPhrase();
-            playersRequired = getNumberOfPlayerRequired(phrase);
         }
 
-        return String.format(phrase, Settings.getRandomPlayers(playersRequired));
+        updateQueue(phrase);
+
+        return String.format(phrase, Settings.getRandomPlayers(getNumberOfPlayerRequired(phrase)));
     }
 
     private static String getRandomPhrase() {
         Random rand = new Random();
         return phrases.get(rand.nextInt(phrases.size()));
+    }
+
+    private static void updateQueue(String phrase) {
+        recentlyUsedPhrases.offer(phrase);
+        if (recentlyUsedPhrases.size() > QUEUE_MAX_SIZE) {
+            recentlyUsedPhrases.poll();
+        }
+    }
+
+    private static boolean hasEnoughPlayers(String phrase) {
+        return Settings.getPlayerCount() < getNumberOfPlayerRequired(phrase);
     }
 
     private static Integer getNumberOfPlayerRequired(String phrase) {
