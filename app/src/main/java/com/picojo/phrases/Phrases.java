@@ -13,6 +13,7 @@ public class Phrases {
         phrases.clear();
 
         //Actions
+        phrases.add("La deriere personne châpeau pointu s'assis par terre pour 6 questions");
         phrases.add("La plus grande personne prend 4 gorgées");
         phrases.add("Ceux qui porte des lunettes prennent 2 gorgées");
         phrases.add("Ceux qui ne porte pas des lunettes prennent 2 gorgées");
