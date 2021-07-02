@@ -13,6 +13,12 @@ public class Phrases {
         phrases.clear();
 
         //Actions
+        phrases.add("%s Mets tes bas dans tes mains pour 6 questions. si tu n'a pas de mains/bas tu chug");
+        phrases.add("%s commence le WWWATERFALL!");
+        phrases.add("%s Donne le nombre de gorgé que tu tes cassé d'os");
+        phrases.add("%s si tu n'a pas de chien prend 2 gorgée");
+        phrases.add("%s si tu est jamais aller au mephisto boit 6 gorgée");
+        phrases.add("%s vériter ou conséquence");
         phrases.add("%s texte ta maman que tu l'aime vraiment beaucoup");
         phrases.add("%s fait un massage a ton voisin de gauche ou prend 4 gorgés");
         phrases.add("La deriere personne châpeau pointu s'assis par terre pour 6 questions");
