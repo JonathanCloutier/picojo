@@ -13,6 +13,8 @@ public class Phrases {
         phrases.clear();
 
         //Actions
+        phrases.add("%s texte ta maman que tu l'aime vraiment beaucoup");
+        phrases.add("%s fait un massage a ton voisin de gauche ou prend 4 gorgés");
         phrases.add("La deriere personne châpeau pointu s'assis par terre pour 6 questions");
         phrases.add("La plus grande personne prend 4 gorgées");
         phrases.add("Ceux qui porte des lunettes prennent 2 gorgées");
@@ -100,6 +102,7 @@ public class Phrases {
         phrases.add("%s racontre une blague  ou prend 4 gorgées");
 
         //Jeux
+    
         phrases.add("Flip the cup: Le premier qui échoue prend autant de gorgé qu'il y a eu de réussite");
         phrases.add("Le dernier a mettre son pouce sur la table après %s prend 5 gorgées");
         phrases.add("%s dit quelque chose que tu n'aime pas. Tous ceux qui aime prenne 2 gorgées");
@@ -127,6 +130,7 @@ public class Phrases {
         phrases.add("Vote: Un monde sans musique ou sans films? Les perdant prennent 3 gorgées.");
 
         //Règles
+        phrases.add("Règle: Le prochain qui regarde son cell prend 4 gorgées");
         phrases.add("Règle: Le prochain qui dit 'bière' prend 4 gorgées");
         phrases.add("Règle: Le prochain qui va au toilette prend 6 gorgées");
         phrases.add("Règle: Le prochain qui parle a %s prend 3 gorgées");
