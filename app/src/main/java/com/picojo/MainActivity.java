@@ -1,5 +1,6 @@
 package com.picojo;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,12 +12,18 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.picojo.databinding.ActivityMainBinding;
+import com.picojo.settings.Settings;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     NavController settingsController;
+    private SharedPreferences settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         settingsController = navController;
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        settings = getSharedPreferences("Settings", 0);
+        Settings.setSettings(settings);
+        loadSettings();
     }
 
 
@@ -58,4 +69,26 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
+
+    private void loadSettings() {
+        loadPlayers();
+        loadCustomPhrases();
+    }
+
+    private void loadPlayers() {
+        Settings.setPlayers(parseStringIntoArray(settings.getString("Players", "")));
+    }
+
+    private void loadCustomPhrases() {
+        Settings.setCustomPhrases(parseStringIntoArray(settings.getString("Phrases", "")));
+    }
+
+    private static List<String> parseStringIntoArray(String string) {
+        String[] strings = string.replace("[", "").replace("]", "").split(", ");
+        List<String> results =  new ArrayList<>(Arrays.asList(strings));
+        results.remove("");
+
+        return results;
+    }
+
 }

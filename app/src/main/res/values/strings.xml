@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pico</string>
+    <string name="app_name">Picojo</string>
     <!-- Strings used for fragments for navigation -->
     <string name="game_label">Picojo</string>
     <string name="players_label">Players</string>

@@ -142,7 +142,7 @@ public class Phrases {
         phrases.add("Règle: Le prochain qui va au toilette prend 6 gorgées");
         phrases.add("Règle: Le prochain qui parle a %s prend 3 gorgées");
         phrases.add("Règle: %s le prochain a te regarder dans les yeux prend 4 gorgées.");
-        phrases.add("Règle: Chaque fois que %s dit 'marco', % doit répondre 'polo' sinon il prend 2 gorgées");
+        phrases.add("Règle: Chaque fois que %s dit 'marco', %s doit répondre 'polo' sinon il prend 2 gorgées");
         phrases.add("Règle: Pendant 10 minutes, chaque fois que %s parle a %s ou %s, il prend 3 gorgées");
         phrases.add("Règle: Pendant 5 minutes, %s parle avec un accent congolais ou prend 6 gorgées");
         phrases.add("Règle: Pour les 3 prochaines question, les gorgées prise et distribuer sont inversé.");
