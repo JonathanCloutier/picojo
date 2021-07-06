@@ -24,10 +24,10 @@ public class Phrases {
         //Actions
         phrases.add("%s tu peux doubler 1 fois max 12 gorgée");
         phrases.add("%s si tu a bu plus q'une 24 dans la derniere semaine chug. A partir de dimanche");
-        phrases.add("%s Dit le nom complet de tout le monde qui joue ou prend 5 gorgé");
-        phrases.add("%s Mets tes bas dans tes mains pour 6 questions. si tu n'a pas de mains/bas tu chug");
+        phrases.add("%s dit le nom complet de tout le monde qui joue ou prend 5 gorgé");
+        phrases.add("%s mets tes bas dans tes mains pour 6 questions. si tu n'a pas de mains/bas tu chug");
         phrases.add("%s commence le WWWATERFALL!");
-        phrases.add("%s Donne le nombre de gorgé que tu tes cassé d'os");
+        phrases.add("%s donne le nombre de gorgé que tu tes cassé d'os");
         phrases.add("%s si tu n'a pas de chien prend 2 gorgée");
         phrases.add("%s si tu est jamais aller au mephisto boit 6 gorgée");
         phrases.add("%s vériter ou conséquence");
@@ -120,6 +120,7 @@ public class Phrases {
         phrases.add("%s racontre une blague  ou prend 4 gorgées");
 
         //Jeux
+        phrases.add("%s sacre le dernier qui en trouve pu prend 3 gorgées");
         phrases.add("Flip the cup: Le premier qui échoue prend autant de gorgé qu'il y a eu de réussite");
         phrases.add("Le dernier a mettre son pouce sur la table après %s prend 5 gorgées");
         phrases.add("%s dit quelque chose que tu n'aime pas. Tous ceux qui aime prennent 2 gorgées");
