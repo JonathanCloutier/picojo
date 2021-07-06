@@ -10,6 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class Phrases {
     private static final int QUEUE_MAX_SIZE = 30;
@@ -22,22 +23,22 @@ public class Phrases {
 
         //Actions
         phrases.add("%s texte ta maman que tu l'aime vraiment beaucoup");
-        phrases.add("%s fait un massage a ton voisin de gauche ou prend 4 gorgés");
-        phrases.add("La deriere personne châpeau pointu s'assis par terre pour 6 questions");
+        phrases.add("%s fait un massage a ton voisin de gauche ou prend 4 gorgées");
+        phrases.add("La dernière personne châpeau pointu s'assis par terre pour 6 questions");
         phrases.add("La plus grande personne prend 4 gorgées");
-        phrases.add("Ceux qui porte des lunettes prennent 2 gorgées");
+        phrases.add("Ceux qui portent des lunettes prennent 2 gorgées");
         phrases.add("Ceux qui ne porte pas des lunettes prennent 2 gorgées");
         phrases.add("%s boit autend de gorgées qu'il y a de fille présente");
         phrases.add("Prend 3 gorgées si t'es déjà aller au Méphisto");
         phrases.add("Les invités prennent 2 gorgées");
         phrases.add("L'hote' prend 2 gorgées");
-        phrases.add("Tous ceux qui ont fait un arbre de noel cette année prenne 3 gorgées");
+        phrases.add("Tous ceux qui ont fait un arbre de noel cette année prennent 3 gorgées");
         phrases.add("Tout le monde prend autant de gorgées que d'année d'étude post-secondaire");
         phrases.add("La derniere personne qui a ouvert un bière prend 2 gorgées");
         phrases.add("%s choisi la prochaine chanson");
         phrases.add("%s Choisi qui entre %s et %s doit finir ça consommation");
         phrases.add("Pendant 10 minutes %s doit servir les consommations");
-        phrases.add("Tout ceux qui on un écran craqué prenne 2 gorgées");
+        phrases.add("Tout ceux qui on un écran craqué prennent 2 gorgées");
         phrases.add("L'hote du jeux distribue 3 gorgées");
         phrases.add("Si tu déjà a perdu ton cellulaire et que tu ne la jamais retrouver prend 3 gorgées sinon distribu 3 gorgées");
         phrases.add("%s choisi un object dans la pièce. Le premier a y touché distribu 4 gorgées");
@@ -53,14 +54,14 @@ public class Phrases {
         phrases.add("La premiere personne a identifé le joueur le plus jeune distribu 5 gorgées");
         phrases.add("%s distribue et prend autant de gorgées que tu a de frère ou soeur.");
         phrases.add("%s devine le sport préféré de %s. Prend 2 gorgées si tu te trompe. Distribue 3 gorgées si tu réussi.");
-        phrases.add("Tout ceux qui on fumé aujourd'hui prenne 2 gorgées.");
+        phrases.add("Tout ceux qui on fumé aujourd'hui prennent 2 gorgées.");
         phrases.add("La dernière personne arrivé prend 3 gorgées.");
         phrases.add("Les personnes en couple prennent 2 gorgées.");
         phrases.add("Prend 2 gorgées si tu a déjà volé quelque chose a quelqu'un a la table.");
         phrases.add("Distribue 2 gorgées si tu a déjà manger chez %s.");
         phrases.add("Prend 2 gorgées si tu chante dans la douche.");
         phrases.add("%s prend autant de gorgées que tu veux puis distribue en autant");
-        phrases.add("%s et %s prenne 2 gorgées dans le drink de l'autre");
+        phrases.add("%s et %s prennent 2 gorgées dans le drink de l'autre");
         phrases.add("1 gorgées pour tout le monde! Cheers!");
         phrases.add("Le plus musclé prend 3 gorgée.");
         phrases.add("Le moins musclé prend 3 gorgée.");
@@ -73,7 +74,7 @@ public class Phrases {
         phrases.add("%s donne 2 gorgées a quelqu'un de plus grand que toi. Si impossible prend les!");
         phrases.add("%s donne 2 gorgées a quelqu'un de plus petit que toi. Si impossible prend les!");
         phrases.add("%s donne 2 gorgées a %s ou 4 a %s");
-        phrases.add("%s nomme une chose que tu na jamais fait. Tout ceux qui l'on déjà fait prenne 4 gorgées");
+        phrases.add("%s nomme une chose que tu na jamais fait. Tout ceux qui l'on déjà fait prennent 4 gorgées");
         phrases.add("La dernière personne qui a pris l'avion distribue 3 gorgées.");
         phrases.add("%s, tu a 3 secondes pour dire le nombre de personne présebt dans la piece. Prend 5 gorgées en cas d'éhcec.");
         phrases.add("%s dit une phrase d'un filme, le premier a devenier le film distribue 4 gorgées.");
@@ -112,7 +113,7 @@ public class Phrases {
         //Jeux
         phrases.add("Flip the cup: Le premier qui échoue prend autant de gorgé qu'il y a eu de réussite");
         phrases.add("Le dernier a mettre son pouce sur la table après %s prend 5 gorgées");
-        phrases.add("%s dit quelque chose que tu n'aime pas. Tous ceux qui aime prenne 2 gorgées");
+        phrases.add("%s dit quelque chose que tu n'aime pas. Tous ceux qui aime prennent 2 gorgées");
         phrases.add("'Un artiste décédé' Le premier qui n'en connait pas prend 3 gorgées. %s commence");
         phrases.add("'Nom de supermarché' Le premier qui n'en connait pas prend 3 gorgées. %s commence");
         phrases.add("Celui qui fait le plus de push-ups entre %s et %s distribue 6 gorgées");
@@ -129,12 +130,12 @@ public class Phrases {
         //Votes
         phrases.add("Vote: Le plus dangereux entre %s et %s prend 3 gorgées");
         phrases.add("Vote: Le moins sportif prend 4 gorgées");
-        phrases.add("Vote: Écouter un films en boucle ou une chanson en boucle pendant 1 journée? Les perdant prennent 3 gorgées");
+        phrases.add("Vote: Écouter un films en boucle ou une chanson en boucle pendant 1 journée? Les perdants prennent 3 gorgées");
         phrases.add("Vote: Qui a la plus belle coupe de cheveux entre %s et %s. Le perdant prend 2 gorgées. Le gagnant distribue 2 gorgées");
-        phrases.add("Vote: Qu'est ce qui est le plus essentiel. Du savon ou une voiture? Les perdant prennent 2 gorgées.");
-        phrases.add("Vote: Ne plus avoir besoin de dormir ou ne plus avoir besoin de travailler? Les perdant prennent 3 gorgées.");
-        phrases.add("Vote: Préfèrais tu travailler pour Amazon ou Google? Les perdant prennent 3 gorgées.");
-        phrases.add("Vote: Un monde sans musique ou sans films? Les perdant prennent 3 gorgées.");
+        phrases.add("Vote: Qu'est ce qui est le plus essentiel. Du savon ou une voiture? Les perdants prennent 2 gorgées.");
+        phrases.add("Vote: Ne plus avoir besoin de dormir ou ne plus avoir besoin de travailler? Les perdants prennent 3 gorgées.");
+        phrases.add("Vote: Préfèrais tu travailler pour Amazon ou Google? Les perdants prennent 3 gorgées.");
+        phrases.add("Vote: Un monde sans musique ou sans films? Les perdants prennent 3 gorgées.");
 
         //Règles
         phrases.add("Règle: Le prochain qui regarde son cell prend 4 gorgées");
@@ -153,7 +154,15 @@ public class Phrases {
 
     public static String getRandom() {
         String phrase = getRandomPhrase();
-        while (hasEnoughPlayers(phrase) && !recentlyUsedPhrases.contains(phrase)) {
+        while (!hasEnoughPlayers(phrase) || recentlyUsedPhrases.contains(phrase)) {
+            if (!hasEnoughPlayers(phrase)) {
+                Log.d("Player count", phrase);
+            }
+
+            if (recentlyUsedPhrases.contains(phrase)) {
+                Log.d("Rand", "Phrase dupliqué évité: " + phrase);
+            }
+
             phrase = getRandomPhrase();
         }
 
@@ -175,7 +184,7 @@ public class Phrases {
     }
 
     private static boolean hasEnoughPlayers(String phrase) {
-        return Settings.getPlayerCount() < getNumberOfPlayerRequired(phrase);
+        return Settings.getPlayerCount() >= getNumberOfPlayerRequired(phrase);
     }
 
     private static Integer getNumberOfPlayerRequired(String phrase) {

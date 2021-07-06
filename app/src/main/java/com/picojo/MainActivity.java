@@ -12,6 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.picojo.databinding.ActivityMainBinding;
+import com.picojo.phrases.Phrases;
 import com.picojo.settings.Settings;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         settings = getSharedPreferences("Settings", 0);
         Settings.setSettings(settings);
         loadSettings();
+        Phrases.reset();
     }
 
 
