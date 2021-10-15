@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadSettings() {
         loadPlayers();
         loadCustomPhrases();
+        loadDifficulty();
     }
 
     private void loadPlayers() {
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadCustomPhrases() {
         Settings.setCustomPhrases(parseStringIntoArray(settings.getString("Phrases", "")));
+    }
+
+    private void loadDifficulty() {
+        Settings.setDifficulty(Float.parseFloat(settings.getString("Difficulty", "1")));
     }
 
     private static List<String> parseStringIntoArray(String string) {

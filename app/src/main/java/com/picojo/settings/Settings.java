@@ -2,22 +2,26 @@ package com.picojo.settings;
 
 import android.content.SharedPreferences;
 
+import com.picojo.phrases.Phrase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Settings {
     private static List<String> players = new ArrayList();
     private static List<String> customPhrases = new ArrayList();
+    private static float difficulty = 1;
     private static SharedPreferences settings;
 
     public static void setSettings(SharedPreferences settings) {
         Settings.settings = settings;
     }
 
-    public static List<String> getPhrases() {
-        return customPhrases;
+    public static List<Phrase> getPhrases() {
+        return customPhrases.stream().map(phrase -> new Phrase(phrase)).collect(Collectors.toList());
     }
 
     public static void addPhrase(String phrase) {
@@ -64,7 +68,16 @@ public class Settings {
         Settings.customPhrases = customPhrases;
     }
 
-    public static Object[] getRandomPlayers(int amountOfPlayers) {
+    public static float getDifficulty() {
+        return difficulty;
+    }
+
+    public static void setDifficulty(float newDifficulty) {
+        difficulty = newDifficulty;
+        saveDifficulty();
+    }
+
+    public static String[] getRandomPlayers(int amountOfPlayers) {
         List<String> allPlayers = new ArrayList<>(players);
         List<String> selectedPlayers = new ArrayList();
 
@@ -91,6 +104,12 @@ public class Settings {
     private static void savePlayers() {
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("Players", Arrays.toString(players.toArray()));
+        editor.commit();
+    }
+
+    private static void saveDifficulty() {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("Difficulty", Float.toString(difficulty));
         editor.commit();
     }
 }
