@@ -4,6 +4,7 @@
     <string name="game_label">Picojo</string>
     <string name="players_label">Players</string>
     <string name="phrases_label">Phrases</string>
+    <string name="difficulty_label">Difficulty</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

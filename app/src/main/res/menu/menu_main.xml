@@ -16,4 +16,12 @@
         android:orderInCategory="100"
         android:title="@string/phrases_label"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/custom_difficulty_setting"
+        android:checkable="false"
+        android:onClick="accessDifficultySettings"
+        android:orderInCategory="100"
+        android:title="@string/difficulty_label"
+        app:showAsAction="never" />
+
 </menu>

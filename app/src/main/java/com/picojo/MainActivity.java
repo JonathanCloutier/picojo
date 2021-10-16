@@ -66,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void accessDifficultySettings(MenuItem item) {
+        if (settingsController.getCurrentDestination().getId() != R.id.DifficultyFragment) {
+            settingsController.navigate(R.id.action_to_DifficultyFragment);
+        }
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
